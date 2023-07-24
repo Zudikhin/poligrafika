@@ -51,5 +51,35 @@ $(document).ready(function () {
 		$("body").removeClass("scroll");
 	});
 
+	var countAllSlider = $(".slider_wrap_block_item").length;
+
+	$(".slider_wrap_count_all").text(countAllSlider);
+
+	$('.slider_wrap_block').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: false,
+		centerMode: true,
+		focusOnSelect: true,
+		prevArrow: $('.slider_wrap_prev'),
+      	nextArrow: $('.slider_wrap_next'),
+		responsive: [
+			{
+			  breakpoint: 767,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				centerMode: true
+			  }
+			}
+		]
+	});
+
+	
+
+	$(".slider_wrap_block").on("afterChange", function(event, slick, currentSlide){
+		$(".slider_wrap_count_current").text(parseInt(slick.currentSlide + 1));
+	});
 	
 });
