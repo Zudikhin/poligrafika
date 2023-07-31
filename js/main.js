@@ -76,10 +76,15 @@ $(document).ready(function () {
 		]
 	});
 
-	
-
 	$(".slider_wrap_block").on("afterChange", function(event, slick, currentSlide){
 		$(".slider_wrap_count_current").text(parseInt(slick.currentSlide + 1));
+	});
+
+	$(".price_block_item").each(function() {
+		var height = $(this).find(".price_block_item_table_row").eq(0).find(".price_block_item_table_row_item").eq(0).height();
+		$(this).find(".price_block_item_table_row").each(function() {
+		  $(this).find(".price_block_item_table_row_item").eq(0).height(height);
+		});
 	});
 	
 });
