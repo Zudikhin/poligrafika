@@ -4355,6 +4355,19 @@ input:focus {
   left: 0px;
   top: 6px;
 }
+.view_block_item a {
+  color: #598D9B;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 17.5px */
+  display: inline-block;
+  margin-top: 7px;
+}
+.view_block_item a img {
+  width: 9px;
+}
 .view_text {
   color: #1B1B1B;
   font-family: "Mulish", sans-serif;
@@ -4399,6 +4412,12 @@ input:focus {
   .view_block_item p {
     font-size: 18px;
     margin-top: 25px;
+  }
+  .view_block_item a {
+    font-size: 18px;
+  }
+  .view_block_item a img {
+    width: 11px;
   }
   .view_block_item ul {
     margin-top: 15px;
