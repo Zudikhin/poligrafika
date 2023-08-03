@@ -516,7 +516,8 @@ input:focus {
     display: none;
   }
   .main_block {
-    height: 780px;
+    height: calc(100vh - 106px);
+    max-height: 780px;
     border-radius: 100px;
     position: relative;
   }
@@ -686,16 +687,16 @@ input:focus {
     transition: all 0.3s linear;
   }
   .main_block h1 {
-    font-size: 100px;
+    font-size: 80px;
   }
   .main_block_text {
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .main_block_text_black {
-    font-size: 33px;
+    font-size: 25px;
   }
   .main_block_text_anime {
-    font-size: 33px;
+    font-size: 25px;
   }
   .main_block_description {
     font-size: 35px;
@@ -713,6 +714,18 @@ input:focus {
   }
   .main_block_top_right span {
     font-size: 18px;
+  }
+  .main_block h1 {
+    font-size: 100px;
+  }
+  .main_block_text {
+    margin-top: 40px;
+  }
+  .main_block_text_black {
+    font-size: 33px;
+  }
+  .main_block_text_anime {
+    font-size: 33px;
   }
 }
 @media (min-width: 1680px) {
@@ -748,7 +761,8 @@ input:focus {
 }
 @media (min-width: 1200px) {
   .main.other .main_block {
-    height: 780px;
+    height: calc(100vh - 106px);
+    max-height: 780px;
   }
 }
 @media (min-width: 1500px) {
@@ -780,7 +794,8 @@ input:focus {
 }
 @media (min-width: 1200px) {
   .main.stickers .main_block {
-    height: 780px;
+    height: calc(100vh - 106px);
+    max-height: 780px;
   }
 }
 @media (min-width: 1500px) {
@@ -812,7 +827,8 @@ input:focus {
 }
 @media (min-width: 1200px) {
   .main.cards .main_block {
-    height: 780px;
+    height: calc(100vh - 106px);
+    max-height: 780px;
   }
 }
 @media (min-width: 1500px) {
@@ -844,7 +860,8 @@ input:focus {
 }
 @media (min-width: 1200px) {
   .main.notebook .main_block {
-    height: 780px;
+    height: calc(100vh - 106px);
+    max-height: 780px;
   }
 }
 @media (min-width: 1500px) {
@@ -876,7 +893,8 @@ input:focus {
 }
 @media (min-width: 1200px) {
   .main.brochures .main_block {
-    height: 780px;
+    height: calc(100vh - 106px);
+    max-height: 780px;
   }
 }
 @media (min-width: 1500px) {
@@ -908,7 +926,8 @@ input:focus {
 }
 @media (min-width: 1200px) {
   .main.shirts .main_block {
-    height: 780px;
+    height: calc(100vh - 106px);
+    max-height: 780px;
   }
 }
 @media (min-width: 1500px) {
@@ -940,7 +959,8 @@ input:focus {
 }
 @media (min-width: 1200px) {
   .main.diplom .main_block {
-    height: 780px;
+    height: calc(100vh - 106px);
+    max-height: 780px;
   }
 }
 @media (min-width: 1500px) {
@@ -972,7 +992,8 @@ input:focus {
 }
 @media (min-width: 1200px) {
   .main.souvenirs .main_block {
-    height: 780px;
+    height: calc(100vh - 106px);
+    max-height: 780px;
   }
 }
 @media (min-width: 1500px) {
@@ -1004,7 +1025,8 @@ input:focus {
 }
 @media (min-width: 1200px) {
   .main.calendar .main_block {
-    height: 780px;
+    height: calc(100vh - 106px);
+    max-height: 780px;
   }
 }
 @media (min-width: 1500px) {
@@ -1742,11 +1764,15 @@ input:focus {
 .slider_wrap_block .slick-list {
   margin: 0 -10px;
 }
-.slider_wrap_block .slick-active {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+.slider_wrap_block .slide {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.slider_wrap_block .slick-current .slide, .slider_wrap_block .slick-target .slide {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .slider_wrap_block_item img {
   width: 100%;
@@ -3315,7 +3341,7 @@ input:focus {
     margin-top: 40px;
   }
   .way_block_item {
-    padding: 60px 90px 30px 90px;
+    padding: 30px 30px 30px 30px;
   }
   .way_block_item h4 {
     font-size: 25px;
@@ -3332,6 +3358,11 @@ input:focus {
     width: 7px;
     height: 7px;
     top: 7px;
+  }
+}
+@media (min-width: 1600px) {
+  .way_block_item {
+    padding: 60px 30px 30px 90px;
   }
 }
 

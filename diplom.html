@@ -239,22 +239,40 @@
         <div class="slider_wrap">
           <div class="slider_wrap_block">
             <div class="slider_wrap_block_item">
-              <img src="img/slider/diplom_1.webp" alt="">
+              <img src="img/slider/diplom_1.png" alt="">
             </div>
             <div class="slider_wrap_block_item">
-              <img src="img/slider/diplom_2.webp" alt="">
+              <img src="img/slider/diplom_2.png" alt="">
             </div>
             <div class="slider_wrap_block_item">
-              <img src="img/slider/diplom_3.webp" alt="">
+              <img src="img/slider/diplom_3.png" alt="">
             </div>
             <div class="slider_wrap_block_item">
-              <img src="img/slider/diplom_1.webp" alt="">
+              <img src="img/slider/diplom_4.png" alt="">
             </div>
             <div class="slider_wrap_block_item">
-              <img src="img/slider/diplom_2.webp" alt="">
+              <img src="img/slider/diplom_5.png" alt="">
             </div>
             <div class="slider_wrap_block_item">
-              <img src="img/slider/diplom_3.webp" alt="">
+              <img src="img/slider/diplom_6.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/diplom_7.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/diplom_8.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/diplom_9.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/diplom_10.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/diplom_11.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/diplom_12.png" alt="">
             </div>
           </div>
           <div class="slider_wrap_prev">
@@ -800,10 +818,44 @@
     <script src="js/main.js"></script>
 
     <script>
-      var typed = new Typed('#typed', {
-        strings: ['дИПЛОМЫ','НАГРАДЫ','МЕДАЛИ','СЕРТИФИКАТЫ И Т.Д.'],
-        typeSpeed: 50
-      });
+
+      function setupTypedReplace() {
+        // the text node to type in
+        var typed_class = 'main_block_description';
+        // the original text content to replace, but also use
+        var replace_text = 'СЕРТИФИКАТЫ И Т.Д.';
+
+        var options = {
+          strings: ['дИПЛОМЫ','НАГРАДЫ','МЕДАЛИ', replace_text], // existing text goes at the end
+          typeSpeed: 80,
+          backSpeed: 10,
+          backDelay: 1000,
+          loop: true,
+          smartBackspace: false,
+          cursorChar: '|',
+          attr: null
+        };
+        // clear out the existing text gracefully then setup the loop
+        new Typed('.' + typed_class, {
+          strings: [replace_text, ''],
+          backSpeed: options.backSpeed,
+          backDelay: options.backDelay,
+          cursorChar: options.cursorChar,
+          attr: options.attr,
+          startDelay: 700,
+          onComplete: function (t) {
+            // existing text has now been removed so let's actually clear everything out
+            // and setup the proper Typed loop we want. If we don't do this, the original
+            // text content breaks the flow of the loop.
+            t.destroy();
+            document.getElementsByClassName(typed_class)[0].textContent = '';
+            new Typed('.' + typed_class, options);
+          }
+        });
+      }
+
+      setupTypedReplace();
+
     </script>
 
   </body>

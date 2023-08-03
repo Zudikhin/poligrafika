@@ -239,22 +239,40 @@
         <div class="slider_wrap">
           <div class="slider_wrap_block">
             <div class="slider_wrap_block_item">
-              <img src="img/slider/souvenirs_1.webp" alt="">
+              <img src="img/slider/souvenirs_1.png" alt="">
             </div>
             <div class="slider_wrap_block_item">
-              <img src="img/slider/souvenirs_2.webp" alt="">
+              <img src="img/slider/souvenirs_2.png" alt="">
             </div>
             <div class="slider_wrap_block_item">
-              <img src="img/slider/souvenirs_3.webp" alt="">
+              <img src="img/slider/souvenirs_3.png" alt="">
             </div>
             <div class="slider_wrap_block_item">
-              <img src="img/slider/souvenirs_1.webp" alt="">
+              <img src="img/slider/souvenirs_4.png" alt="">
             </div>
             <div class="slider_wrap_block_item">
-              <img src="img/slider/souvenirs_2.webp" alt="">
+              <img src="img/slider/souvenirs_5.png" alt="">
             </div>
             <div class="slider_wrap_block_item">
-              <img src="img/slider/souvenirs_3.webp" alt="">
+              <img src="img/slider/souvenirs_6.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/souvenirs_7.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/souvenirs_8.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/souvenirs_9.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/souvenirs_10.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/souvenirs_11.png" alt="">
+            </div>
+            <div class="slider_wrap_block_item">
+              <img src="img/slider/souvenirs_12.png" alt="">
             </div>
           </div>
           <div class="slider_wrap_prev">
@@ -776,10 +794,44 @@
     <script src="js/main.js"></script>
 
     <script>
-      var typed = new Typed('#typed', {
-        strings: ['НА РУЧКАХ','НА ФЛешках','на powerbank','на брелках','на фонариках','на чашках','и на многом другом'],
-        typeSpeed: 50
-      });
+
+      function setupTypedReplace() {
+        // the text node to type in
+        var typed_class = 'main_block_description';
+        // the original text content to replace, but also use
+        var replace_text = 'и на многом другом';
+
+        var options = {
+          strings: ['НА РУЧКАХ','НА ФЛешках','на powerbank','на брелоках','на фонариках','на чашках', replace_text],
+          typeSpeed: 80,
+          backSpeed: 10,
+          backDelay: 1000,
+          loop: true,
+          smartBackspace: false,
+          cursorChar: '|',
+          attr: null
+        };
+        // clear out the existing text gracefully then setup the loop
+        new Typed('.' + typed_class, {
+          strings: [replace_text, ''],
+          backSpeed: options.backSpeed,
+          backDelay: options.backDelay,
+          cursorChar: options.cursorChar,
+          attr: options.attr,
+          startDelay: 700,
+          onComplete: function (t) {
+            // existing text has now been removed so let's actually clear everything out
+            // and setup the proper Typed loop we want. If we don't do this, the original
+            // text content breaks the flow of the loop.
+            t.destroy();
+            document.getElementsByClassName(typed_class)[0].textContent = '';
+            new Typed('.' + typed_class, options);
+          }
+        });
+      }
+
+      setupTypedReplace();
+
     </script>
     
   </body>

@@ -61,6 +61,9 @@ $(document).ready(function () {
 		dots: false,
 		centerMode: true,
 		focusOnSelect: true,
+		speed: 500,
+		autoplay: true,
+  		autoplaySpeed: 1500,
 		prevArrow: $('.slider_wrap_prev'),
       	nextArrow: $('.slider_wrap_next'),
 		responsive: [
