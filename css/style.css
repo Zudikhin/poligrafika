@@ -2419,7 +2419,7 @@ input:focus {
     font-size: 25px;
   }
   .format_block_left ul {
-    width: 206px;
+    width: 214px;
   }
   .format_block_left ul li {
     font-size: 18px;
@@ -2656,6 +2656,53 @@ input:focus {
 }
 .format.brochures .format_block_right ul li::after {
   background: #46AECA;
+}
+
+.format.notebook .format_block_left ul li b {
+  font-weight: 500;
+  color: #1B1B1B;
+}
+.format.notebook .format_block_left ul li::after {
+  background: #86A894;
+}
+.format.notebook .format_block_right ul li b {
+  font-weight: 500;
+  color: #1B1B1B;
+}
+.format.notebook .format_block_right ul li::after {
+  background: #86A894;
+}
+@media (min-width: 768px) {
+  .format.notebook .format_block_left {
+    padding: 60px 0px 60px 50px;
+  }
+  .format.notebook .format_block_left ul {
+    width: 233px;
+  }
+  .format.notebook .format_block_right {
+    padding: 60px 0px 60px 50px;
+  }
+}
+@media (min-width: 1360px) {
+  .format.notebook .format_block_left {
+    padding: 60px 0px 60px 60px;
+  }
+  .format.notebook .format_block_right {
+    padding: 60px 0px 60px 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .format.notebook .format_block_left ul {
+    width: 282px;
+  }
+  .format.notebook .format_block_right ul {
+    width: 282px;
+  }
+}
+@media (min-width: 1600px) {
+  .format.notebook .format_block_left ul {
+    width: 300px;
+  }
 }
 
 .price {
@@ -3181,11 +3228,11 @@ input:focus {
     margin-top: 210px;
   }
   .more_block_left {
-    padding: 40px 50px;
+    padding: 40px 38px;
     border-radius: 50px;
   }
   .more_block_left h2 {
-    font-size: 25px;
+    font-size: 23px;
   }
   .more_block_left a {
     margin-top: 25px;
@@ -3198,11 +3245,23 @@ input:focus {
     font-size: 20px;
   }
   .more_block_right {
-    height: 272px;
+    height: 260px;
     border-radius: 50px;
+    margin-top: 0px;
   }
   .more_block_right img {
     max-width: 570px;
+  }
+}
+@media (min-width: 1360px) {
+  .more_block_left {
+    padding: 40px 60px;
+  }
+  .more_block_left h2 {
+    font-size: 25px;
+  }
+  .more_block_right {
+    height: 268px;
   }
 }
 @media (min-width: 1600px) {
@@ -3370,12 +3429,15 @@ input:focus {
   background: #86A894;
 }
 @media (min-width: 1200px) {
+  .way.notebook .way_block_item {
+    padding: 30px 30px 0px 30px;
+  }
   .way.notebook .way_block_item:first-child img {
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    bottom: 0px;
+    bottom: 12px;
     width: calc(100% - 60px);
   }
   .way.notebook .way_block_item:nth-child(2) img {
@@ -3383,16 +3445,16 @@ input:focus {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    bottom: 0px;
+    bottom: 12px;
     width: calc(100% - 60px);
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1440px) {
   .way.notebook .way_block_item:first-child img {
-    bottom: 26px;
+    bottom: 16px;
   }
   .way.notebook .way_block_item:nth-child(2) img {
-    bottom: 26px;
+    bottom: 16px;
   }
 }
 
@@ -3400,12 +3462,15 @@ input:focus {
   background: #46AECA;
 }
 @media (min-width: 1200px) {
+  .way.brochures .way_block_item {
+    padding: 30px 30px 0px 30px;
+  }
   .way.brochures .way_block_item:first-child img {
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    bottom: 0px;
+    bottom: 12px;
     width: calc(100% - 60px);
   }
   .way.brochures .way_block_item:nth-child(2) img {
@@ -3413,16 +3478,32 @@ input:focus {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    bottom: 0px;
+    bottom: 12px;
     width: calc(100% - 60px);
   }
 }
-@media (min-width: 1360px) {
+@media (min-width: 1440px) {
   .way.brochures .way_block_item:first-child img {
-    bottom: 26px;
+    bottom: 16px;
   }
   .way.brochures .way_block_item:nth-child(2) img {
-    bottom: 26px;
+    bottom: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .way.stickers .way_block_item {
+    padding: 30px 30px 6px 30px;
+  }
+}
+@media (min-width: 1360px) {
+  .way.stickers .way_block_item {
+    padding: 30px 30px 0px 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .way.stickers .way_block_item {
+    padding: 60px 30px 20px 90px;
   }
 }
 
