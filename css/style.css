@@ -3255,7 +3255,7 @@ input:focus {
 }
 @media (min-width: 1360px) {
   .more_block_left {
-    padding: 40px 60px;
+    padding: 40px 38px;
   }
   .more_block_left h2 {
     font-size: 25px;
