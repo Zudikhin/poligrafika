@@ -89,5 +89,25 @@ $(document).ready(function () {
 		  $(this).find(".price_block_item_table_row_item").eq(0).height(height);
 		});
 	});
+
+	var countAllCut = $(".cutting_section_block_slider_mob_slider_item").length;
+
+	$(".cutting_section_block_slider_mob_btns_count_all").text(countAllCut);
+
+	$('.cutting_section_block_slider_mob_slider').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		fade: true,
+		prevArrow: $('.cutting_section_block_slider_mob_btns_prev'),
+      	nextArrow: $('.cutting_section_block_slider_mob_btns_next')
+	});
+
+	$(".cutting_section_block_slider_mob_slider").on("afterChange", function(event, slick, currentSlide){
+		$(".cutting_section_block_slider_mob_btns_count_change").text(parseInt(slick.currentSlide + 1));
+	});
+
+	
 	
 });
