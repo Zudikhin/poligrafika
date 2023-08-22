@@ -101,13 +101,48 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		fade: true,
 		prevArrow: $('.cutting_section_block_slider_mob_btns_prev'),
-      	nextArrow: $('.cutting_section_block_slider_mob_btns_next')
+      	nextArrow: $('.cutting_section_block_slider_mob_btns_next'),
+
 	});
 
 	$(".cutting_section_block_slider_mob_slider").on("afterChange", function(event, slick, currentSlide){
 		$(".cutting_section_block_slider_mob_btns_count_change").text(parseInt(slick.currentSlide + 1));
 	});
 
-	
+
+	var countAllSert = $(".cutting_section_sertificate_slider_item").length;
+
+	$(".cutting_section_sertificate_btns_count_all").text(countAllSert);
+
+	$('.cutting_section_sertificate_slider').slick({
+		dots: false,
+		infinite: true,
+		fade: false,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		fade: false,
+		prevArrow: $('.cutting_section_sertificate_btns_prev'),
+      	nextArrow: $('.cutting_section_sertificate_btns_next'),
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+				  slidesToShow: 1,
+				  slidesToScroll: 1,
+				  fade: true
+				}
+			}
+		]
+	});
+
+	$(".cutting_section_sertificate_slider").on("afterChange", function(event, slick, currentSlide){
+		$(".cutting_section_sertificate_btns_count_change").text(parseInt(slick.currentSlide + 1));
+	});
+
+	$(".blog_all").click(function() {
+		$(this).addClass("hide");
+		$(".blog_block_item").addClass("show");
+	});
 	
 });
